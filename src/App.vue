@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <img alt="Vue logo" width="100px" src="./assets/logo.png" />
+    <Calendar />
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import Calendar from './components/Calendar/index.vue';
 
-export default Vue.extend({
+export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Calendar,
   },
-});
+};
 </script>
 
-<style lang="less">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

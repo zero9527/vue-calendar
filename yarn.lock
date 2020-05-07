@@ -1196,6 +1196,13 @@
   optionalDependencies:
     prettier "^1.18.2"
 
+"@vue/composition-api@^0.5.0":
+  version "0.5.0"
+  resolved "http://192.168.1.199:4873/@vue%2fcomposition-api/-/composition-api-0.5.0.tgz#2dbaa02a5d1f5d0d407d53d5529fe444aa8362f3"
+  integrity sha1-LbqgKl0fXQ1AfVPVUp/kRKqDYvM=
+  dependencies:
+    tslib "^1.9.3"
+
 "@vue/eslint-config-airbnb@^5.0.2":
   version "5.0.2"
   resolved "http://192.168.1.199:4873/@vue%2feslint-config-airbnb/-/eslint-config-airbnb-5.0.2.tgz#4e3ba49e8d7a7c0bf6b244b4d7a2fe488bfb9371"
@@ -8064,7 +8071,7 @@ ts-pnp@^1.1.6:
   resolved "http://192.168.1.199:4873/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=
 
-tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.11.2"
   resolved "http://192.168.1.199:4873/tslib/-/tslib-1.11.2.tgz#9c79d83272c9a7aaf166f73915c9667ecdde3cc9"
   integrity sha1-nHnYMnLJp6rxZvc5Fclmfs3ePMk=
