@@ -24,20 +24,13 @@ interface CalendarThis {
   getDateParams: (timestamp?: string | undefined) => any;
 }
 
-export default function Calendar(
-  this: CalendarThis,
-  initialDate?: string,
-  { getPrevNext }: CalendarOptions = {
-    getPrevNext: false,
-  },
-) {
+export default function Calendar(this: CalendarThis, initialDate?: string) {
   this.description = '排列按照星期日~星期六';
   this.initialDate = initialDate; // 获取的日期
   this.year = '';
   this.month = '';
   this.monthList = [];
   this.today = '';
-  this.getPrevNext = getPrevNext;
 
   this.init();
 }
@@ -62,41 +55,28 @@ Calendar.prototype = {
 
     for (let i = 0; i < 7; i++) {
       if (!this.monthList[week]) this.monthList[week] = [];
-      if (i < _day) {
-        // 第一周
+      if (i <= _day) {
+        // i < _day: 第一周，1号前
         this.monthList[week].push({
-          year: this.year,
-          month: this.month,
+          year: i < _day ? '' : this.year,
+          month: i < _day ? '' : this.month,
           date: i < _day ? '' : date,
-          dateString: i + 1 < _day ? '' : dateString,
-        });
-      } else if (i === _day) {
-        this.monthList[week].push({
-          year: this.year,
-          month: this.month,
-          date,
-          dateString,
+          dateString: i < _day ? '' : dateString,
         });
       } else {
         const tomorrow = this.getDateString(this.year, this.month, date + 1);
-        if (this.validDate(tomorrow)) {
-          this.monthList[week].push({
-            year: this.year,
-            month: this.month,
-            date: ++date,
-            dateString: tomorrow,
-          });
-        } else {
-          this.monthList[week].push({
-            year: this.year,
-            month: this.month,
-            date: '',
-            dateString: '',
-          });
-        }
+        const valid = this.validDate(tomorrow);
+        // valid === false 最后一周，当月最后一天之后
+        this.monthList[week].push({
+          year: valid ? this.year : '',
+          month: valid ? this.month : '',
+          date: valid ? ++date : '',
+          dateString: valid ? tomorrow : '',
+        });
       }
     }
 
+    // 下周日，一周第一天为周日(new Date().getDay() === 0为周日)
     const nextWeekday1 = this.getDateString(this.year, this.month, date + 1);
     if (this.validDate(nextWeekday1) && week < 10) {
       this.generate(week + 1, nextWeekday1);

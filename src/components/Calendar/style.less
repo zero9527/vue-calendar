@@ -7,15 +7,15 @@ li {
 
 .calendar {
   width: 100%;
-  padding: 16px;
-  background: #f6f6f6;
+  padding: 0 8px;
+  background: #fafafa;
   box-sizing: border-box;
 
   .header {
     display: flex;
     align-items: center;
-    padding: 4px 0;
-    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
 
     > li {
       width: 40px;
@@ -60,8 +60,21 @@ li {
         }
       }
 
-      .another {
-        color: #999;
+      .active {
+        color: #fff;
+        &::after {
+          content: '';
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -15px;
+          margin-left: -15px;
+          border-radius: 30px;
+          background: #2196f3;
+          z-index: -1;
+        }
       }
 
       .same-date {
@@ -72,7 +85,7 @@ li {
           position: absolute;
           top: 50%;
           left: 50%;
-          margin-top: -16px;
+          margin-top: -15px;
           margin-left: -15px;
           border-radius: 30px;
           border: 1px solid #2196f3;
@@ -80,22 +93,13 @@ li {
         }
       }
 
-      .active {
-        color: #fff;
-        &::after {
-          content: '';
-          width: 30px;
-          height: 30px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-top: -16px;
-          margin-left: -15px;
-          border-radius: 30px;
-          background: #2196f3;
-          z-index: -1;
-        }
+      .another-month-date {
+        color: #ccc;
       }
     }
+  }
+
+  .footer {
+    padding: 8px 0;
   }
 }

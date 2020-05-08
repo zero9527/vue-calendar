@@ -22,7 +22,10 @@ module.exports = {
     'linebreak-style': [0, 'error', 'windows'],
     'arrow-body-style': 'warn',
     'no-param-reassign': 'off',
+    'operator-linebreak': 'off',
+    'no-return-assign': 'off',
     '@typescript-eslint/no-use-before-define': ['off'],
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 };
