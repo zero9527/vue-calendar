@@ -5,8 +5,12 @@
   </div>
 </template>
 
-<script>
-import Calendar from './components/Calendar/index.vue';
+<script lang="ts">
+import AsyncComponent from '@/components/AsyncComponent/index';
+
+const Calendar = AsyncComponent(() =>
+  import('@/components/Calendar/index.vue'),
+);
 
 export default {
   name: 'App',

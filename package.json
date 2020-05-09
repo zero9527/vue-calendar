@@ -1,7 +1,7 @@
 {
   "name": "vue-calendar",
   "version": "0.1.0",
-  "private": true,
+  "home": "https://github.com/zero9527/vue-calendar",
   "scripts": {
     "start": "yarn serve",
     "serve": "vue-cli-service serve",

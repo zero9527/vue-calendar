@@ -70,7 +70,7 @@ export interface DateItem {
 }
 
 export default defineComponent({
-  name: 'calendar',
+  name: 'Calendar',
   components: {
     selectYearMonth,
   },

@@ -1,0 +1,4 @@
+# 只检查src目录
+!src/**/*.js
+
+*.config.js
