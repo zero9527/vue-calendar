@@ -4,8 +4,8 @@
 基于 `Vue2.6` + `composition-api` + `typesctipt`
 
 ## 预览
-![预览图片1](./public/preview/preview1.png)
-![预览图片2](./public/preview/preview2.png)
+![预览图片1](./public/preview/preview1.jpg)
+![预览图片2](./public/preview/preview2.jpg)
 
 ## 日历
 一月按周分隔，一周以周日开始
@@ -41,6 +41,8 @@ const setMonthView = () => {
 ```
 
 ### 按月份生成的日历
+一月按周分隔，一周以周日开始
+
 只含当月数据，如2020-05：
 ```json
 [
