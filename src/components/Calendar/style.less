@@ -11,6 +11,10 @@ li {
   background: #fafafa;
   box-sizing: border-box;
 
+  li {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .header {
     display: flex;
     align-items: center;
@@ -18,7 +22,6 @@ li {
     border-bottom: 1px solid #eee;
 
     > li {
-      width: 40px;
       text-align: center;
       user-select: none;
 
@@ -31,6 +34,14 @@ li {
       }
     }
 
+    /deep/ .icon {
+      padding: 0 4px;
+
+      &:active {
+        color: #2196f3;
+      }
+    }
+
     .month {
       flex: auto;
       font-size: 16px;
@@ -38,12 +49,30 @@ li {
   }
 
   .body {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: attr(month);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      color: #eee;
+      z-index: -1;
+    }
+
     .week-day {
       display: flex;
 
       > span {
         flex: 1;
         padding: 4px;
+      }
+
+      .active {
+        color: #2196f3;
       }
     }
 
@@ -53,7 +82,7 @@ li {
       .item {
         position: relative;
         flex: 1;
-        padding: 8px 4px;
+        padding: 10px 4px;
         z-index: 1;
         &:hover {
           cursor: pointer;
@@ -73,6 +102,7 @@ li {
           margin-left: -15px;
           border-radius: 30px;
           background: #2196f3;
+          box-shadow: 2px 2px 10px -2px #2196f3;
           z-index: -1;
         }
       }

@@ -1,5 +1,5 @@
 <template>
-  <h4>loading</h4>
+  <div>loading...</div>
 </template>
 
 <script>
@@ -7,3 +7,5 @@ export default {
   name: 'Loading',
 };
 </script>
+
+<style lang="less" scoped></style>

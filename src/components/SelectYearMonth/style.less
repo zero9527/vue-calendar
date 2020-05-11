@@ -42,11 +42,34 @@
         height: 100%;
         text-align: center;
 
+        .range {
+          color: #999;
+        }
+
         .scroll {
           max-height: calc(100% - 20px);
           padding: 10px 0;
           overflow-y: auto;
         }
+      }
+
+      .up,
+      .down {
+        position: sticky;
+        padding: 6px 0;
+        top: -10px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), #fff);
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover {
+          color: #2196f3;
+        }
+      }
+
+      .down {
+        bottom: -10px;
+        background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.7));
       }
 
       .item {

@@ -2,11 +2,8 @@
  * 日历生成
  * @param initialDate 2020/5/1
  */
-interface CalendarOptions {
-  getPrevNext?: boolean;
-}
 
-interface CalendarThis {
+export interface CalendarThis {
   description: string;
   initialDate?: string;
   year: string;

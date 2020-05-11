@@ -2,6 +2,11 @@ import Loading from './Loading.vue';
 
 /**
  * 异步组件配置
+ * 例：
+ *  import AsyncComponent from '@/components/AsyncComponent/index';
+    const Calendar = AsyncComponent(() =>
+      import('@/components/Calendar/index.vue'),
+    );
  */
 const AsyncComponent = (AsyncComp: () => Promise<any>) => {
   const Comp = () => ({

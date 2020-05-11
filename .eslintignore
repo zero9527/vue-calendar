@@ -2,3 +2,5 @@
 !src/**/*.js
 
 *.config.js
+
+src/**/iconfont.js
