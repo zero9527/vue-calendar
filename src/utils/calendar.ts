@@ -79,19 +79,18 @@ Calendar.prototype = {
       this.generate(week + 1, nextWeekday1);
     }
   },
-  // 校验日期是否有效 date: 2020/05/01
-  validDate(date: string) {
-    const _Date = new Date(date);
-    const date1 = Number(date.split('/')[2]);
-    const date2 = _Date.getDate();
+  // 校验日期是否有效，对应月份是否有这一天；dateString: 2020/05/01
+  validDate(dateString: string) {
+    const _Date = new Date(dateString);
+    const date1 = Number(dateString.split('/')[2]);
+    const date2 = new Date(dateString).getDate();
     return `${_Date}` !== 'Invalid Date' && date1 === date2;
   },
   // @return 2020/05/01
   getDateString(year: number, month: number, date: number) {
-    const dateString = `${year}/${month < 10 ? `0${month}` : month}/${
-      date < 10 ? `0${date}` : date
-    }`;
-    return dateString;
+    const _month = `${month}`.padStart(2, '0');
+    const _date = `${date}`.padStart(2, '0');
+    return `${year}/${_month}/${_date}`;
   },
   getDateParams(timestamp?: string) {
     const _Date = timestamp ? new Date(timestamp) : new Date();

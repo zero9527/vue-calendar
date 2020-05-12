@@ -1,7 +1,7 @@
 module.exports = {
   outputDir: 'docs',
   publicPath: './',
-  productionSourceMap: true,
+  productionSourceMap: false,
   configureWebpack: config => {
     config.devServer = {
       port: 2333,
