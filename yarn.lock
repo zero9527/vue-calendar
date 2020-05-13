@@ -8774,3 +8774,8 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
+
+z-calendar@^1.0.0:
+  version "1.0.0"
+  resolved "http://192.168.1.199:4873/z-calendar/-/z-calendar-1.0.0.tgz#ddd2de2f366f9bcd3c6b1a3518f19a30c1a9c0d7"
+  integrity sha1-3dLeLzZvm808axo1GPGaMMGpwNc=

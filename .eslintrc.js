@@ -26,6 +26,7 @@ module.exports = {
     'no-return-assign': 'off',
     'implicit-arrow-linebreak': 'off',
     'function-paren-newline': 'off',
+    'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-use-before-define': ['off'],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',

@@ -84,7 +84,7 @@ import {
   computed,
   onMounted,
 } from '@vue/composition-api';
-import Calendar from '@/utils/calendar';
+import Calendar from 'z-calendar';
 import selectYearMonth from '../SelectYearMonth/index.vue';
 
 const C = Calendar as any;

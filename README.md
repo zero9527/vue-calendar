@@ -8,7 +8,10 @@
 ![预览图片2](./public/preview/preview2.jpg)
 
 ## 日历
-一月按周分隔，一周以周日开始
+一月按周分隔，一周以周日开始; 
+
+工具 [源码](https://github.com/zero9527/z-calendar)，
+已发布npm [z-calendar](https://github.com/zero9527/z-calendar)
 
 ### 补充当月空白日期
 获取前后两个月，合并响应日期到当前月份的第一周、最后一周
