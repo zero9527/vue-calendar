@@ -4,8 +4,8 @@
 基于 `Vue2.6` + `composition-api` + `typesctipt`
 
 ## 预览
-![预览图片1](./public/preview/preview1.jpg)
-![预览图片2](./public/preview/preview2.jpg)
+![预览图片1](https://s1.ax1x.com/2020/05/14/Y0lx2D.jpg)
+![预览图片2](https://s1.ax1x.com/2020/05/14/Y0lv8O.jpg)
 
 ## 日历
 一月按周分隔，一周以周日开始; 
