@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, computed } from '@vue/composition-api';
+// iconfont.js: Symbol
 import './iconfont';
 
 export default defineComponent({
@@ -28,6 +29,7 @@ export default defineComponent({
 <style lang="less" scoped>
 .icon {
   display: inline-block;
+  vertical-align: middle;
 
   & > svg {
     width: 1em;

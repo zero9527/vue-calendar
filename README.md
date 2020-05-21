@@ -1,7 +1,7 @@
 # vue-calendar
 
 ## 说明
-基于 `Vue2.6` + `composition-api` + `typesctipt`
+基于 `Vue2.6` + `composition-api` + `typescript`
 
 ## 预览
 ![预览图片1](https://s1.ax1x.com/2020/05/14/Y0lx2D.jpg)

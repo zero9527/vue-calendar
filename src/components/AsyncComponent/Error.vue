@@ -1,15 +1,15 @@
 <template>
-  <div class="loading">拼命加载中...</div>
+  <div class="error">加载出错了:(</div>
 </template>
 
 <script>
 export default {
-  name: 'Loading',
+  name: 'Error',
 };
 </script>
 
 <style lang="less" scoped>
-.loading {
+.error {
   text-align: center;
 }
 </style>

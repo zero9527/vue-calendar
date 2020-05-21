@@ -3,5 +3,8 @@
 **/*.ejs
 **/*.html
 **/iconfont.js
+.*.js
+
+*.json
 
 package.json
