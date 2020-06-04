@@ -1,16 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app-calendar">
     <div class="title">Vue-Calendar</div>
     <Calendar />
   </div>
 </template>
 
 <script lang="ts">
-import AsyncComponent from '@/components/AsyncComponent/index';
+import Calendar from '@/components/Calendar/index.vue';
+// const Calendar = () => import('@/components/Calendar/index.vue');
+// import AsyncComponent from '@/components/AsyncComponent/index';
 
-const Calendar = AsyncComponent(() =>
-  import('@/components/Calendar/index.vue'),
-);
+// // single-spa 下使用异步组件有问题
+// const Calendar = AsyncComponent(() =>
+//   import(
+//     /* webpackPrefetch: true */
+//     /* webpackChunkName: 'calendar' */
+//     '@/components/Calendar/index.vue'
+//   ),
+// );
 
 export default {
   name: 'App',
@@ -24,7 +31,7 @@ export default {
 body {
   margin: 0;
 }
-#app {
+#app-calendar {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -87,6 +87,20 @@ li {
         z-index: 1;
         &:hover {
           cursor: pointer;
+
+          &::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            // border-radius: 30px;
+            border: 1px solid #2196f3;
+            z-index: -1;
+          }
         }
       }
 
@@ -130,7 +144,12 @@ li {
     }
   }
 
+  .from-today {
+    color: #ccc;
+    margin-top: 10px;
+  }
+
   .footer {
-    padding: 8px 0;
+    padding: 10px 0;
   }
 }

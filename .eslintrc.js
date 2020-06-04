@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'arrow-body-style': 'off',
     'arrow-parens': 'off',
+    "comma-dangle": 'off',
     'consistent-return': 'off',
     'function-paren-newline': 'off',
     'linebreak-style': [0, 'error', 'windows'],
@@ -34,5 +35,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'object-curly-newline': 'off',
     'operator-linebreak': 'off',
+    'prefer-destructuring': 'off',
+    'import/prefer-default-export': 'off'
   },
 };

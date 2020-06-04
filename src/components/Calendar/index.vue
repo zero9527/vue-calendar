@@ -36,11 +36,7 @@
         @close="selectYearMonthVisible = false"
       />
     </ul>
-    <ul
-      class="body"
-      :activeDate="JSON.stringify(activeDate)"
-      :month="yearMonth.month"
-    >
+    <ul class="body" :activeDate="JSON.stringify(activeDate)" :month="yearMonth.month">
       <li class="week-day">
         <span
           v-for="(day, index) in weekday"
@@ -69,6 +65,11 @@
           {{ item.date }}
         </span>
       </li>
+    </ul>
+    <ul class="from-today" v-if="fromToday">
+      {{
+        fromToday
+      }}
     </ul>
     <ul class="footer">
       <button @click="setToday">今天</button>
@@ -118,6 +119,21 @@ export default defineComponent({
     const activeDate = ref<DateItem>();
     const selectYearMonthVisible = ref(false);
 
+    // 距今天的距离
+    const fromToday = computed(() => {
+      if (!activeDate.value) return '';
+      const onDayTime = 24 * 60 * 60 * 1000;
+      const distance =
+        new Date(activeDate.value!.dateString).getTime() -
+        new Date(
+          `${_Date.getFullYear()}/${_Date.getMonth() + 1}/${_Date.getDate()}`,
+        ).getTime();
+      if (distance === 0) return `日期：${activeDate.value.dateString}，今天`;
+      return `日期：${activeDate.value.dateString}，${Math.abs(distance / onDayTime)}${
+        distance < 0 ? '天前' : '天后'
+      }`;
+    });
+
     // 显示年月份，如2020-05
     const showYearMonth = computed(
       () => `${yearMonth.year}-${`${yearMonth.month}`.padStart(2, '0')}`,
@@ -138,8 +154,7 @@ export default defineComponent({
       if (monthList.value[1][0].month === _month) {
         monthList.value.find((item: DateItem[]) => {
           const today = item.find(
-            (i: DateItem) =>
-              Number(i.date) === _date && Number(i.month === _month),
+            (i: DateItem) => Number(i.date) === _date && Number(i.month === _month),
           );
           if (today) {
             activeDate.value = today;
@@ -163,15 +178,13 @@ export default defineComponent({
 
     // 切换上一年、下个月
     const changeYear = (type: 'prev' | 'next') => {
-      yearMonth.year =
-        type === 'prev' ? yearMonth.year - 1 : yearMonth.year + 1;
+      yearMonth.year = type === 'prev' ? yearMonth.year - 1 : yearMonth.year + 1;
       setMonthView();
     };
 
     // 切换上个月prev、下个月next
     const changeMonth = (type: 'prev' | 'next') => {
-      const { year, month } =
-        type === 'prev' ? getPrevYearMonth() : getNextYearMonth();
+      const { year, month } = type === 'prev' ? getPrevYearMonth() : getNextYearMonth();
       yearMonth.year = year;
       yearMonth.month = month;
       setMonthView();
@@ -235,8 +248,7 @@ export default defineComponent({
 
     // 星期
     const isActiveWeekday = (index: number) =>
-      activeDate.value &&
-      index === new Date(activeDate.value.dateString).getDay();
+      activeDate.value && index === new Date(activeDate.value.dateString).getDay();
 
     // 今天
     const isToday = (item: DateItem) => {
@@ -256,6 +268,7 @@ export default defineComponent({
       yearMonth,
       weekday,
       monthList,
+      fromToday,
       activeDate,
       todayDate,
       changeYear,

@@ -7400,6 +7400,11 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
+single-spa-vue@^1.8.2:
+  version "1.8.2"
+  resolved "http://192.168.1.199:4873/single-spa-vue/-/single-spa-vue-1.8.2.tgz#16a5eb6e6e0c4cbb35cd2736b81f78ffabc5fcc2"
+  integrity sha1-FqXrbm4MTLs1zSc2uB94/6vF/MI=
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "http://192.168.1.199:4873/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -7865,6 +7870,11 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+systemjs-webpack-interop@^1.1.0:
+  version "1.2.1"
+  resolved "http://192.168.1.199:4873/systemjs-webpack-interop/-/systemjs-webpack-interop-1.2.1.tgz#70cce64a93ff646f52344eb560288d83362c9695"
+  integrity sha1-cMzmSpP/ZG9SNE61YCiNgzYslpU=
 
 table@^5.2.3:
   version "5.4.6"
@@ -8395,6 +8405,11 @@ vm-browserify@^1.0.1:
   resolved "http://192.168.1.199:4873/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-cli-plugin-single-spa@^1.1.0:
+  version "1.1.0"
+  resolved "http://192.168.1.199:4873/vue-cli-plugin-single-spa/-/vue-cli-plugin-single-spa-1.1.0.tgz#76b3dd189fd149afe4fe05312439262e4ac58af0"
+  integrity sha1-drPdGJ/RSa/k/gUxJDkmLkrFivA=
+
 vue-eslint-parser@^7.0.0:
   version "7.0.0"
   resolved "http://192.168.1.199:4873/vue-eslint-parser/-/vue-eslint-parser-7.0.0.tgz#a4ed2669f87179dedd06afdd8736acbb3a3864d6"
@@ -8422,6 +8437,11 @@ vue-loader@^15.9.1:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-router@^3.3.2:
+  version "3.3.2"
+  resolved "http://192.168.1.199:4873/vue-router/-/vue-router-3.3.2.tgz#0099de402edb2fe92f9711053ab5a2156f239cad"
+  integrity sha1-AJneQC7bL+kvlxEFOrWiFW8jnK0=
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
