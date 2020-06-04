@@ -1,6 +1,6 @@
 <template>
   <div id="app-calendar">
-    <div class="title">Vue-Calendar</div>
+    <div class="title" v-if="!useSingleSpa">Vue-Calendar</div>
     <Calendar />
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
   components: {
     Calendar,
   },
+  inject: ['useSingleSpa'],
 };
 </script>
 

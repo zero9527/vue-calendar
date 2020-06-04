@@ -1,7 +1,6 @@
 module.exports = {
   outputDir: 'docs',
   publicPath: './',
-  // filenameHashing: false,
   productionSourceMap: false,
   configureWebpack: config => {
     config.devServer = {

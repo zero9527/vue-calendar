@@ -1,18 +1,21 @@
 import Vue from 'vue';
 import singleSpaVue from 'single-spa-vue';
 import VueCompositionApi from '@vue/composition-api';
+import Iconfont from '@/components/Iconfont/index.vue';
 import { printLog } from '@/utils';
-import Iconfont from './components/Iconfont/index.vue';
 import App from './App.vue';
 
 Vue.use(VueCompositionApi);
 Vue.component('icon-font', Iconfont);
 
 Vue.config.productionTip = false;
-Vue.config.devtools = true;
+
+if (process.env.NODE_ENV === 'development') {
+  Vue.config.devtools = true;
+}
 
 const provide = {
-  isSingleSpa: true,
+  useSingleSpa: Boolean((window as any).singleSpaNavigate),
 };
 
 // ============= 非 single-spa 单独启动 =============
@@ -24,11 +27,11 @@ if (!(window as any).singleSpaNavigate) {
 }
 
 // ============= single-spa 模式启动 =============
+// appOptions.el：挂载的dom节点，在主项目需要有；没有 el 的话会添加到body下
 const vueLifeCycles = singleSpaVue({
   Vue,
   appOptions: {
     provide,
-    // el：挂载的dom节点，在主项目需要有；没有el的话会添加到body下
     el: '#app-calendar',
     render: (h: any) => h(App),
   },
