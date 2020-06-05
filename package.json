@@ -12,6 +12,7 @@
     "@vue/composition-api": "^0.5.0",
     "core-js": "^3.6.4",
     "single-spa-vue": "^1.8.2",
+    "systemjs-webpack-interop": "^2.1.1",
     "vue": "^2.6.11",
     "z-calendar": "^1.0.0"
   },

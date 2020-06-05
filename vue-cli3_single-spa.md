@@ -192,6 +192,8 @@ export function unmount(props: object) {
 ```
 
 ### 2.3 问题
+#### 问题描述
+
 子项目使用异步组件 `import()` 时，单独跑起来没问题！！！但是在主应用里面会报错，改为正常引入 `import from` 就没事。。。
 
 子应用使用异步组件，在主应用报错
@@ -235,6 +237,24 @@ export default {
 };
 </script>
 ```
+
+#### 异步组件问题解决
+```js
+// src\set-public-path.ts
+import { setPublicPath } from 'systemjs-webpack-interop';
+
+if ((window as any).singleSpaNavigate) {
+  setPublicPath('@vue-mf/calendar', 2);
+}
+```
+
+```js
+// vue.config.js
+config.output.jsonpFunction = 'wpJsonpFlightsWidget';
+```
+
+[https://single-spa.js.org/docs/recommended-setup/#build-tools-webpack--rollup](https://single-spa.js.org/docs/recommended-setup/#build-tools-webpack--rollup)
+
 
 ## 参考
 - [single-spa](https://single-spa.js.org/docs/configuration/)

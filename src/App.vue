@@ -6,18 +6,15 @@
 </template>
 
 <script lang="ts">
-import Calendar from '@/components/Calendar/index.vue';
-// const Calendar = () => import('@/components/Calendar/index.vue');
-// import AsyncComponent from '@/components/AsyncComponent/index';
+import AsyncComponent from '@/components/AsyncComponent/index';
 
-// // single-spa 下使用异步组件有问题
-// const Calendar = AsyncComponent(() =>
-//   import(
-//     /* webpackPrefetch: true */
-//     /* webpackChunkName: 'calendar' */
-//     '@/components/Calendar/index.vue'
-//   ),
-// );
+const Calendar = AsyncComponent(() =>
+  import(
+    /* webpackPrefetch: true */
+    /* webpackChunkName: 'calendar' */
+    '@/components/Calendar/index.vue'
+  ),
+);
 
 export default {
   name: 'App',

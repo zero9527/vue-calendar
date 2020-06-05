@@ -7871,10 +7871,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-systemjs-webpack-interop@^1.1.0:
-  version "1.2.1"
-  resolved "http://192.168.1.199:4873/systemjs-webpack-interop/-/systemjs-webpack-interop-1.2.1.tgz#70cce64a93ff646f52344eb560288d83362c9695"
-  integrity sha1-cMzmSpP/ZG9SNE61YCiNgzYslpU=
+systemjs-webpack-interop@^2.1.1:
+  version "2.1.1"
+  resolved "http://192.168.1.199:4873/systemjs-webpack-interop/-/systemjs-webpack-interop-2.1.1.tgz#ed00e36f44b62eabff60f593496a1049954b34ab"
+  integrity sha1-7QDjb0S2Lqv/YPWTSWoQSZVLNKs=
 
 table@^5.2.3:
   version "5.4.6"
@@ -8437,11 +8437,6 @@ vue-loader@^15.9.1:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
-
-vue-router@^3.3.2:
-  version "3.3.2"
-  resolved "http://192.168.1.199:4873/vue-router/-/vue-router-3.3.2.tgz#0099de402edb2fe92f9711053ab5a2156f239cad"
-  integrity sha1-AJneQC7bL+kvlxEFOrWiFW8jnK0=
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
