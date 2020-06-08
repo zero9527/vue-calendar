@@ -194,9 +194,9 @@ export default defineComponent({
       const _prev = getPrevYearMonth();
       const _next = getNextYearMonth();
       const { year, month } = yearMonth;
-      const { monthList: pList } = new C(`${_prev.year}/${_prev.month}`);
-      const { monthList: _monthList } = new C(`${year}/${month}`);
-      const { monthList: nList } = new C(`${_next.year}/${_next.month}`);
+      const { monthList: pList } = new C(`${_prev.year}/${_prev.month}/1`);
+      const { monthList: _monthList } = new C(`${year}/${month}/1`);
+      const { monthList: nList } = new C(`${_next.year}/${_next.month}/1`);
       const len = _monthList.length;
 
       // 补齐第一周1号前空白日期为上月日期
