@@ -7,7 +7,7 @@ node_modules
 .env.*.local
 
 # 部署配置
-/deploy/deploy-config.json
+zr-deploy-config.json
 *.zip
 
 # Log files
